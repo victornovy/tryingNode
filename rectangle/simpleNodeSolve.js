@@ -1,4 +1,10 @@
-var rect = require('./simpleNodeRect');
+var argv = require("yargs")
+    .usage("Usage: node $0 -l=[num] -b=[num]")
+    .demand(["l", "b"])
+    .describe({b:"base"})
+    .argv;
+
+var rect = require("./simpleNodeRect");
 
 function solveRect(b, l) {
     /*
@@ -21,5 +27,4 @@ function solveRect(b, l) {
     });
 }
 
-solveRect(5, 5);
-solveRect(5, -5);
+solveRect(argv.b, argv.l);
