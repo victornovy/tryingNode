@@ -1,18 +1,14 @@
 var express = require('express'),
-    http = require('http'),
+    morgan = require('morgan'),
     hostname = 'localhost',
     port = '3000';
 
 var app = express();
 
-app.use(function(req, res, next) {
-    console.log(req.headers);
-    res.writeHead(200, {'Context-Type': 'text/html'});
-    res.end('<html><body><h1>Hello World</h1></body></html>');
-});
+app.use(morgan('dev'));
 
-var server = http.createServer(app);
+app.use(express.static(__dirname + '/public'));
 
-server.listen(port, hostname, function() {
+app.listen(port, hostname, function() {
     console.log('Server running at http://'+ hostname + ':'+ port);
 });
