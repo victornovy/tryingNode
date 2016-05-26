@@ -1,0 +1,14 @@
+{
+    "name": "chat",
+    "version": "0.0.0",
+    "description": "Creating chat using jade and nodejs",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Victor Novy <novyvictor@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.13.4",
+        "jade": "^1.11.0",
+        "socket.io": "^1.4.6"
+    }
+}
