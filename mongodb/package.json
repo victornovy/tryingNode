@@ -1,0 +1,15 @@
+{
+  "name": "mongo",
+  "version": "0.0.0",
+  "description": "\"Trying mongo and nodejs\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Novy <novyvictor@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.1.20",
+    "mongoose": "^4.4.19"
+  }
+}
